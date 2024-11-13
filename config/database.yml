@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: d2ndjim
+  password: postgres
+
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: ecomm_development
+
+test:
+  <<: *default
+  database: ecomm_test
+
+production:
+  <<: *default
+  database: ecomm_production
+  username: ecomm
+  password: <%= ENV["ECOMM_DATABASE_PASSWORD"] %>
