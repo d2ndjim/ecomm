@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :orders
-    resources :stocks
-    resources :products
-    resources :categories
+    resources :products do
+      resources :stocks
+    end
+      resources :categories
   end
   
   devise_for :admins
@@ -19,4 +20,10 @@ Rails.application.routes.draw do
 
 
   get "admin" => "admin#index"
+  get "cart" => "carts#show"
+  post "checkout" => "checkouts#create"
+  get "success" => "checkouts#success"
+  get "cancel" => "checkouts#cancel"
+  post "webhooks" => "webhooks#stripe"
+
 end

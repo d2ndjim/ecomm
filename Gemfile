@@ -45,6 +45,8 @@ gem 'font-awesome-sass', '~> 6.5', '>= 6.5.2'
 
 gem "image_processing", "~> 1.2"
 
+gem "stripe", "~> 10.3"
+
 gem 'pagy', '~> 9.2', '>= 9.2.2'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
