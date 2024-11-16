@@ -49,6 +49,9 @@ gem "stripe", "~> 10.3"
 
 gem 'pagy', '~> 9.2', '>= 9.2.2'
 
+gem 'activestorage-cloudinary-service', '~> 0.2.3'
+gem 'cloudinary', '~> 1.23'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
